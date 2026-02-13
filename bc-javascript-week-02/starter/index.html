@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Agricultura y AgroTech Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🌾 Agricultura y AgroTech Manager</h1>
+    <div id="stats"></div>
+  </header>
+
+  <section id="form-section">
+    <h2>Registrar Recurso AgroTech</h2>
+
+    <form id="create-form">
+      <input type="text" name="name" placeholder="Nombre del recurso" required />
+
+      <textarea name="description" placeholder="Descripción"></textarea>
+
+  <select name="category" required>
+  <option value="maquinaria">🚜 Maquinaria Agrícola</option>
+  <option value="sensores">🌡️ Sensores de Campo</option>
+  <option value="drones">🛩️ Drones Agrícolas</option>
+  <option value="riego">💧 Sistemas de Riego</option>
+  <option value="fertilización">🌱 Fertilización Inteligente</option>
+  <option value="clima">🌦️ Estaciones Meteorológicas</option>
+  <option value="almacen">🏚️ Infraestructura de Almacenamiento</option>
+  <option value="transporte">🚚 Vehículos de Transporte</option>
+  <option value="software">💻 Software y Telemetría</option>
+</select>
+
+
+      <select name="priority" required>
+        <option value="low">Baja</option>
+        <option value="medium">Media</option>
+        <option value="high">Alta</option>
+      </select>
+
+      <input type="text" name="fieldLocation" placeholder="Ubicación del campo" required />
+
+      <input type="number" name="batteryLevel" placeholder="Nivel de batería (%)" required />
+
+      <input type="date" name="lastMaintenance" required />
+
+      <button type="submit">Agregar</button>
+    </form>
+  </section>
+
+  <section id="filters">
+    <h2>Filtros</h2>
+
+    <select id="filter-status">
+      <option value="all">Todos</option>
+      <option value="active">Activos</option>
+      <option value="inactive">Inactivos</option>
+    </select>
+
+    <select id="filter-category">
+      <option value="all">Todas las categorías</option>
+      <option value="maquinaria">Maquinaria</option>
+      <option value="sensores">Sensores</option>
+      <option value="drones">Drones</option>
+      <option value="riego">Riego</option>
+      <option value="fertilización">Fertilización</option>
+    </select>
+
+    <select id="filter-priority">
+      <option value="all">Todas las prioridades</option>
+      <option value="low">Baja</option>
+      <option value="medium">Media</option>
+      <option value="high">Alta</option>
+    </select>
+
+    <input id="search" type="text" placeholder="Buscar..." />
+  </section>
+
+  <section id="list-section">
+    <h2>Lista de Equipos</h2>
+    <div id="items-list"></div>
+
+    <ul id="checklist">
+  <li onclick="toggleCheck(this)">✔️ Filtro por estado</li>
+  <li onclick="toggleCheck(this)">✔️ Filtro por categoría</li>
+  <li onclick="toggleCheck(this)">✔️ Filtro por prioridad</li>
+  <li onclick="toggleCheck(this)">✔️ Búsqueda por nombre y descripción</li>
+  <li onclick="toggleCheck(this)">✔️ CRUD completo</li>
+  <li onclick="toggleCheck(this)">✔️ Persistencia con LocalStorage</li>
+  <li onclick="toggleCheck(this)">✔️ Estadísticas en tiempo real</li>
+</ul>
+
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

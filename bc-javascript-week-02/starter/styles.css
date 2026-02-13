@@ -1,0 +1,140 @@
+/* ==== FONDO GENERAL ==== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: linear-gradient(to bottom, #d2ffcc, #f6fff4);
+}
+
+/* ==== HEADER ==== */
+header {
+  padding: 18px;
+  background: linear-gradient(to right, #b0f59a, #8ee274);
+  border: 2px solid #6ac253;
+  border-radius: 14px;
+  margin-bottom: 25px;
+  color: #1f3d0b;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ==== SECCIONES ==== */
+#form-section, #filters, #list-section {
+  background: #ffffff;
+  padding: 22px;
+  margin-bottom: 22px;
+  border-radius: 14px;
+  border: 1px solid #cfe8c5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* ==== FORMULARIOS ==== */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #88c082;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #f6fff6;
+}
+
+/* Cuadro de descripción */
+textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+/* ==== BOTONES ==== */
+button {
+  background: linear-gradient(to right, #56c93f, #48ad35);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s;
+  font-weight: bold;
+}
+
+button:hover {
+  background: linear-gradient(to right, #3fa52c, #2d8a1f);
+  transform: scale(1.05);
+}
+
+/* ==== ITEMS ==== */
+.item {
+  border: 1px solid #8fcf87;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  background: #f1fff0;
+  transition: 0.2s;
+}
+
+.item:hover {
+  transform: scale(1.01);
+}
+
+/* Elemento inactivo */
+.item.inactive {
+  opacity: 0.5;
+}
+
+/* ==== PRIORIDADES ==== */
+.priority-high {
+  border-left: 6px solid #ff4949;
+  background: #ffe3e3;
+}
+
+.priority-medium {
+  border-left: 6px solid #ffa927;
+  background: #fff1d7;
+}
+
+.priority-low {
+  border-left: 6px solid #4ac74a;
+  background: #e1ffe1;
+}
+
+/* ==== CATEGORÍA ==== */
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-top: 5px;
+  background: #cce4ff;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #003a7a;
+  font-weight: bold;
+}
+
+/* ==== ACCIONES ==== */
+.actions button {
+  margin-right: 8px;
+}
+
+.actions span {
+  margin-right: 18px;
+  font-weight: bold;
+  transition: 0.2s;
+  font-size: 22px;
+}
+
+.actions span:hover {
+  transform: scale(1.25);
+}
+
+/* ==== CHECKLIST ==== */
+#checklist li {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 6px 0;
+  color: #0c550d;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+#checklist li:hover {
+  transform: scale(1.05);
+  color: #0a3e0b;
+}
+
