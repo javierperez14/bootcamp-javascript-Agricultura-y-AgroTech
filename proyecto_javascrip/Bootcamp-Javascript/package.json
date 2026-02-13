@@ -1,0 +1,20 @@
+{
+  "name": "bootcamp-javascript",
+  "version": "1.0.0",
+  "description": "proyecto agricultura-y-agroTech",
+  "homepage": "https://github.com/javierperez14/bootcamp-javascript-Agricultura-y-AgroTech#readme",
+  "bugs": {
+    "url": "https://github.com/javierperez14/bootcamp-javascript-Agricultura-y-AgroTech/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javierperez14/bootcamp-javascript-Agricultura-y-AgroTech.git"
+  },
+  "license": "MIT",
+  "author": "javier perez",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
