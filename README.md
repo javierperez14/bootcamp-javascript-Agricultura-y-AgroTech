@@ -71,6 +71,96 @@ A medida que avances, aquí se irán documentando tus Weeks. 📌 Cada Week tend
 
 ---
 
+### ✅ Week-03 – Sistema de Gestión con POO
+
+**Tema:** Programación Orientada a Objetos con JavaScript ES2023  
+**Carpeta:** `bc-javascript-week-03/`
+
+#### 🔍 Lo que se realizó:
+
+- **Arquitectura de clases completa:**
+  - Clase base abstracta `AgriculturalEquipment`
+  - 3 clases derivadas: `Tractor`, `Sensor`, `Drone`
+  - Clase base `Person` con roles: `Operator` y `Administrator`
+  - Clase principal `AgroTechSystem` para gestión del sistema
+- **Encapsulación total:**
+  - Todos los campos privados usando `#`
+  - Getters y setters con validación
+  - Métodos privados para lógica interna
+- **Herencia y Polimorfismo:**
+  - Uso correcto de `extends` y `super()`
+  - Métodos abstractos implementados en clases derivadas
+  - Sobrescritura de métodos (`getInfo()`, `getIcon()`)
+- **Características ES2023:**
+  - Static blocks para configuración de clase
+  - Métodos estáticos
+  - Campos privados con sintaxis `#`
+- **Sistema completo de gestión:**
+  - CRUD de equipos agrícolas
+  - Gestión de usuarios con roles
+  - Sistema de transacciones y auditoría
+  - Filtros y búsqueda avanzada
+  - Estadísticas en tiempo real
+- **Interfaz profesional:**
+  - Dashboard con métricas
+  - Formularios dinámicos según tipo de equipo
+  - Modal de detalles completos
+  - Estados visuales y badges
+- **Documentación completa:**
+  - README detallado con arquitectura
+  - Diagrama de clases visual
+  - Ejemplos de uso
+
+---
+
+### ✅ Week-04 – Sistema Modular con ES6 Modules
+
+**Tema:** Arquitectura Modular, Destructuring Avanzado y Dynamic Imports  
+**Carpeta:** `bc-javascript-week-04/`
+
+#### 🔍 Lo que se realizó:
+
+- **Arquitectura modular completa:**
+  - Estructura organizada en carpetas (models, services, ui, utils, features)
+  - Separación clara de responsabilidades
+  - Código reutilizable y mantenible
+- **ES6 Modules:**
+  - Named exports para funciones y constantes
+  - Default exports para clases principales
+  - Barrel exports (index.js) para simplificar imports
+  - Imports organizados y optimizados
+- **Destructuring avanzado:**
+  - En parámetros de funciones con valores por defecto
+  - En retornos de funciones
+  - En iteraciones de arrays y objetos
+  - En asignaciones de variables
+- **Dynamic Imports (Lazy Loading):**
+  - Módulo de reportes cargado bajo demanda
+  - Módulo de exportación cargado bajo demanda
+  - Manejo de errores en imports dinámicos
+  - Optimización de carga inicial
+- **Sistema completo de gestión:**
+  - CRUD con validación robusta
+  - Persistencia en LocalStorage
+  - Filtros combinados (categoría, estado, búsqueda)
+  - Estadísticas en tiempo real
+  - Alertas de stock bajo
+- **Features avanzadas:**
+  - Reportes detallados con estadísticas
+  - Exportación a JSON y CSV
+  - Backup del sistema
+  - Top equipos más valiosos
+- **Validación y formateo:**
+  - Validadores para todos los campos
+  - Formateadores de moneda, fechas y números
+  - Mensajes de error descriptivos
+- **Documentación profesional:**
+  - README técnico detallado
+  - Ejemplos de uso del código
+  - Explicación de patrones aplicados
+
+---
+
 ## 🚀 Tecnologías Usadas en el Trimestre
 
 - **HTML5** – Estructura del proyecto
@@ -101,8 +191,9 @@ Aprendiz SENA – Desarrollo de Software
 
 ## 📌 Próximos pasos
 
-- **Week-03** → Implementación de API externa y persistencia remota
-- **Week-04** → Dashboard con gráficas y análisis de datos
+- **Week-05** → Asincronía, Promises y Async/Await
+- **Week-06** → Integración con APIs REST
+- Dashboard con gráficas y análisis de datos
 - Mejorar diseño responsive y experiencia de usuario
 
 ---

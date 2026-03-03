@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión AgroTech - POO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header con estadísticas -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🌱 Sistema de Gestión AgroTech</h1>
+                <div class="stats" id="stats">
+                    <div class="stat-card">
+                        <span class="stat-value" id="totalItems">0</span>
+                        <span class="stat-label">Total Equipos</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value" id="activeItems">0</span>
+                        <span class="stat-label">Activos</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value" id="totalUsers">0</span>
+                        <span class="stat-label">Usuarios</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Sidebar con formulario -->
+            <aside class="sidebar">
+                <div class="form-section">
+                    <h2>Agregar Equipo</h2>
+                    <form id="equipmentForm">
+                        <div class="form-group">
+                            <label for="equipmentType">Tipo de Equipo</label>
+                            <select id="equipmentType" required>
+                                <option value="">Seleccionar...</option>
+                                <option value="Tractor">Tractor</option>
+                                <option value="Sensor">Sensor IoT</option>
+                                <option value="Drone">Drone Agrícola</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" required placeholder="Ej: Tractor John Deere">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Ubicación</label>
+                            <input type="text" id="location" required placeholder="Ej: Sector A">
+                        </div>
+
+                        <!-- Campos específicos por tipo -->
+                        <div id="specificFields"></div>
+
+                        <button type="submit" class="btn btn-primary">Agregar Equipo</button>
+                    </form>
+                </div>
+
+                <!-- Filtros -->
+                <div class="filters-section">
+                    <h3>Filtros</h3>
+                    <div class="form-group">
+                        <label for="filterType">Por Tipo</label>
+                        <select id="filterType">
+                            <option value="">Todos</option>
+                            <option value="Tractor">Tractores</option>
+                            <option value="Sensor">Sensores</option>
+                            <option value="Drone">Drones</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="filterStatus">Por Estado</label>
+                        <select id="filterStatus">
+                            <option value="">Todos</option>
+                            <option value="active">Activos</option>
+                            <option value="inactive">Inactivos</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="searchQuery">Buscar</label>
+                        <input type="text" id="searchQuery" placeholder="Buscar por nombre...">
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Lista de equipos -->
+            <main class="content">
+                <div class="content-header">
+                    <h2>Equipos Registrados</h2>
+                </div>
+                <div id="equipmentList" class="equipment-grid"></div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal de detalles -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

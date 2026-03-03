@@ -1,9 +1,3 @@
-// -------------------------------
-// 🌾 Agricultura y AgroTech App
-// -------------------------------
-
-// ---------- 1. Estado y Persistencia ----------
-
 function loadItems() {
   const data = localStorage.getItem("agri_items");
   return data ? JSON.parse(data) : [];
@@ -19,7 +13,7 @@ function getInitialState() {
 
 let items = getInitialState();
 
-// ---------- 2. CRUD Básico ----------
+
 
 function createItem(itemData) {
   const newItem = {
@@ -60,7 +54,7 @@ function toggleItemActive(id) {
   renderItems(items);
 }
 
-// ---------- 3. Filtros y Búsqueda ----------
+
 
 function filterByStatus(items, status) {
   if (status === "all") return items;
@@ -94,7 +88,7 @@ function applyFilters(items, filters) {
   return result;
 }
 
-// ---------- 4. Estadísticas ----------
+
 
 function getStats(items) {
   return items.reduce((acc, item) => {
@@ -112,7 +106,7 @@ function getItemsByCategory(items) {
   }, {});
 }
 
-// ---------- 5. Renderizado ----------
+
 
 function renderItem(item) {
   return `
@@ -167,7 +161,7 @@ function toggleCheck(li) {
 }
 
 
-// ---------- 6. Eventos ----------
+
 
 document.getElementById("create-form").addEventListener("submit", e => {
   e.preventDefault();
@@ -186,6 +180,6 @@ document.getElementById("create-form").addEventListener("submit", e => {
   e.target.reset();
 });
 
-// Inicial render
+
 renderItems(items);
 
