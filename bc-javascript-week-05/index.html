@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroTech Dashboard – Week 05</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <span class="logo">🌱 AgroTech</span>
+      <div>
+        <h1>Dashboard de Análisis de Datos</h1>
+        <p>Week-05 · JavaScript ES2023 · Javier Pérez</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ── Estadísticas Generales ── -->
+    <section class="section">
+      <h2>📊 Estadísticas Generales</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-label">Total Métrica</span>
+          <span class="stat-value" id="stat-total">–</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Promedio</span>
+          <span class="stat-value" id="stat-avg">–</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Máximo</span>
+          <span class="stat-value" id="stat-max">–</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Mínimo</span>
+          <span class="stat-value" id="stat-min">–</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Total Equipos</span>
+          <span class="stat-value" id="stat-count">–</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Agrupación por Tipo ── -->
+    <section class="section">
+      <h2>🔧 Equipos por Tipo <small>(groupByType · reduce)</small></h2>
+      <div class="type-grid" id="type-groups"></div>
+    </section>
+
+    <!-- ── Top 5 Equipos ── -->
+    <section class="section">
+      <h2>🏆 Top 5 Equipos por Métrica <small>(toSorted · ES2023)</small></h2>
+      <div id="top5-list" class="top-list"></div>
+    </section>
+
+    <!-- ── Ranking ── -->
+    <section class="section">
+      <h2>📈 Ranking de Equipos <small>(flatMap + reduce + toSorted)</small></h2>
+      <ol id="ranking-list" class="ranking-list"></ol>
+    </section>
+
+    <!-- ── Estadísticas por Región ── -->
+    <section class="section">
+      <h2>📍 Métricas por Región <small>(reduce)</small></h2>
+      <div id="region-stats" class="region-container"></div>
+    </section>
+
+    <!-- ── Tendencia Mensual ── -->
+    <section class="section">
+      <h2>📅 Tendencia Mensual 2024 <small>(groupBy mes · Array.from)</small></h2>
+      <div id="monthly-trend" class="chart-bars"></div>
+    </section>
+
+    <!-- ── Filtro por Fechas ── -->
+    <section class="section">
+      <h2>🔍 Filtrar por Rango de Fechas <small>(filter + chaining)</small></h2>
+      <div class="filter-row">
+        <label>Desde: <input type="date" id="date-from" /></label>
+        <label>Hasta: <input type="date" id="date-to" /></label>
+        <button id="btn-filter" class="btn">Filtrar</button>
+      </div>
+      <div id="filter-results" class="filter-results"></div>
+    </section>
+
+    <!-- ── findLast / findLastIndex ── -->
+    <section class="section">
+      <h2>🔎 Búsqueda desde el Final <small>(findLast · findLastIndex · ES2023)</small></h2>
+      <div class="info-box">
+        <p><strong>Último registro verificado:</strong></p>
+        <p id="last-verified">–</p>
+      </div>
+      <div class="info-box">
+        <p><strong>Índice del último registro pendiente:</strong></p>
+        <p id="last-pending">–</p>
+      </div>
+    </section>
+
+    <!-- ── with() demo ── -->
+    <section class="section">
+      <h2>🛡️ Inmutabilidad con <code>with()</code> <small>(ES2023)</small></h2>
+      <div id="with-demo" class="info-box"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>🌱 AgroTech Dashboard · Week-05 · Javier Pérez · SENA Desarrollo de Software</p>
+  </footer>
+
+  <script type="module" src="solution/script.js"></script>
+</body>
+</html>

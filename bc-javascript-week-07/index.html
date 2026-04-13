@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroTech – Sets y Maps</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <span class="logo">🌱</span>
+    <div>
+      <h1>AgroTech – Sistema de Gestión con Sets y Maps</h1>
+      <p>Week-07 · Set · Map · WeakMap · WeakSet · Javier Pérez</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Registro de equipo -->
+    <section class="card">
+      <h2>🔧 Registrar Equipo</h2>
+      <div class="form-row">
+        <input id="eq-id"   type="text" placeholder="ID único (ej: EQ-001)" />
+        <input id="eq-name" type="text" placeholder="Nombre del equipo" />
+        <select id="eq-type">
+          <option value="">Tipo…</option>
+          <option value="sensor">Sensor</option>
+          <option value="drone">Drone</option>
+          <option value="tractor">Tractor</option>
+        </select>
+        <input id="eq-region" type="text" placeholder="Región" />
+        <button class="btn" id="btn-add-eq">Registrar</button>
+      </div>
+      <p class="feedback" id="eq-feedback"></p>
+    </section>
+
+    <!-- Catálogo de equipos -->
+    <section class="card">
+      <h2>📋 Catálogo de Equipos <span class="badge" id="eq-count">0</span></h2>
+      <div id="eq-list" class="item-grid"></div>
+    </section>
+
+    <!-- Gestión de categorías -->
+    <section class="card">
+      <h2>🏷️ Categorías (Set)</h2>
+      <div class="form-row">
+        <input id="cat-input" type="text" placeholder="Nueva categoría" />
+        <button class="btn" id="btn-add-cat">Agregar</button>
+      </div>
+      <div id="cat-list" class="tag-list"></div>
+      <div class="ops-row">
+        <button class="btn btn-sm" id="btn-union">Unión A∪B</button>
+        <button class="btn btn-sm" id="btn-inter">Intersección A∩B</button>
+        <button class="btn btn-sm" id="btn-diff">Diferencia A-B</button>
+        <span id="ops-result" class="ops-result"></span>
+      </div>
+    </section>
+
+    <!-- Estados activos (WeakSet) -->
+    <section class="card">
+      <h2>⚡ Estados Activos (WeakSet)</h2>
+      <p class="hint">Selecciona un equipo para activarlo/desactivarlo:</p>
+      <div id="active-list" class="item-grid"></div>
+    </section>
+
+    <!-- Caché de cálculos (WeakMap) -->
+    <section class="card">
+      <h2>🗄️ Caché de Cálculos (WeakMap)</h2>
+      <p class="hint">Calcula el índice de eficiencia de un equipo (se cachea automáticamente):</p>
+      <div class="form-row">
+        <select id="cache-eq-select"><option value="">Selecciona equipo…</option></select>
+        <button class="btn" id="btn-calc">Calcular</button>
+      </div>
+      <div id="cache-result" class="cache-result"></div>
+    </section>
+
+    <!-- Consola de operaciones -->
+    <section class="card">
+      <h2>🖥️ Consola de Operaciones</h2>
+      <div id="console-log" class="console-box"></div>
+      <button class="btn btn-outline" id="btn-clear-log">Limpiar</button>
+    </section>
+
+  </main>
+
+  <script type="module" src="solution/script.js"></script>
+</body>
+</html>

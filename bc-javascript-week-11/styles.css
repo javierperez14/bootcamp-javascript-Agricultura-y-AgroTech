@@ -1,0 +1,196 @@
+/* ── AgroTech Week-11 – Design System ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary:       #16a34a;
+  --primary-dark:  #15803d;
+  --primary-light: #22c55e;
+  --primary-pale:  #f0fdf4;
+  --primary-soft:  #dcfce7;
+  --red:           #ef4444;
+  --red-dark:      #dc2626;
+  --red-pale:      #fef2f2;
+  --amber:         #f59e0b;
+  --amber-pale:    #fef3c7;
+  --gray-50:  #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-500: #64748b;
+  --gray-700: #334155;
+  --gray-900: #0f172a;
+  --bg:      #f0fdf4;
+  --surface: #ffffff;
+  --border:  #bbf7d0;
+  --font:    'Inter', system-ui, sans-serif;
+  --shadow:    0 4px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.04);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,.10);
+  --radius-sm: 8px;
+  --radius:    12px;
+  --radius-lg: 16px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font); background: var(--bg); color: var(--gray-900); line-height: 1.6; }
+
+/* ── Header ── */
+.header {
+  background: linear-gradient(135deg, #14532d 0%, #166534 50%, #15803d 100%);
+  color: #fff;
+  padding: 1.25rem 2rem;
+  box-shadow: 0 4px 20px rgba(21,128,61,.35);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo { font-size: 2.2rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,.2)); }
+.header h1 { font-size: 1.3rem; font-weight: 800; letter-spacing: -.02em; }
+.header p  { font-size: .8rem; opacity: .75; }
+
+/* ── Container ── */
+.container { max-width: 840px; margin: 2rem auto; padding: 0 1.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+
+/* ── Card ── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+  transition: box-shadow .2s;
+}
+.card:hover { box-shadow: var(--shadow-lg); }
+.card h2 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding-bottom: .7rem;
+  border-bottom: 2px solid var(--primary-soft);
+}
+
+/* ── Badge ── */
+.badge {
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  color: #fff;
+  border-radius: 20px;
+  padding: .15rem .65rem;
+  font-size: .72rem;
+  font-weight: 700;
+}
+
+/* ── Form Row ── */
+.form-row { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: .8rem; }
+.form-row input,
+.form-row select {
+  flex: 1;
+  min-width: 120px;
+  padding: .5rem .75rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: .88rem;
+  font-family: var(--font);
+  background: var(--gray-50);
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.form-row input:focus,
+.form-row select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(22,163,74,.12);
+  background: #fff;
+}
+
+/* ── Buttons ── */
+.btn {
+  padding: .5rem 1.1rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: .88rem;
+  font-weight: 700;
+  font-family: var(--font);
+  transition: transform .15s, box-shadow .15s;
+  box-shadow: 0 2px 8px rgba(22,163,74,.3);
+  white-space: nowrap;
+}
+.btn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(22,163,74,.4); }
+.btn:disabled { background: var(--gray-200); color: var(--gray-500); box-shadow: none; cursor: not-allowed; }
+.btn-sm { padding: .38rem .85rem; font-size: .8rem; }
+.btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); box-shadow: none; }
+.btn-outline:hover { background: var(--primary-pale); transform: none; box-shadow: none; }
+.btn-danger { background: linear-gradient(135deg, var(--red), var(--red-dark)); box-shadow: 0 2px 8px rgba(239,68,68,.3); }
+.btn-danger:hover { box-shadow: 0 4px 14px rgba(239,68,68,.4); }
+.btn-row { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: .8rem; }
+
+/* ── Feedback ── */
+.feedback { font-size: .83rem; font-weight: 500; min-height: 1.2rem; padding: .25rem 0; }
+.feedback.ok  { color: var(--primary); }
+.feedback.err { color: var(--red-dark); }
+
+/* ── Hint ── */
+.hint { font-size: .8rem; color: var(--gray-500); margin-bottom: .8rem; font-style: italic; }
+
+/* ── Record List ── */
+.rec-list { display: flex; flex-direction: column; gap: .5rem; }
+.rec-item {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  background: linear-gradient(90deg, var(--primary-pale), #fff);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: .65rem 1rem;
+  font-size: .84rem;
+  transition: background .15s;
+}
+.rec-item:hover { background: linear-gradient(90deg, var(--primary-soft), #fff); }
+.rec-field { font-weight: 700; flex: 1; color: var(--primary-dark); }
+.rec-status {
+  padding: .18rem .6rem;
+  border-radius: 20px;
+  font-size: .72rem;
+  font-weight: 700;
+}
+.status-verified { background: #bbf7d0; color: #14532d; }
+.status-pending  { background: var(--amber-pale); color: #92400e; }
+.rec-item button { background: none; border: none; cursor: pointer; color: var(--red); font-size: 1rem; transition: transform .15s; }
+.rec-item button:hover { transform: scale(1.2); }
+
+/* ── API Status ── */
+.api-status { margin-top: .8rem; font-size: .86rem; min-height: 2rem; display: flex; flex-direction: column; gap: .3rem; }
+.api-status .attempt { color: var(--gray-500); font-style: italic; }
+.api-status .success { color: var(--primary); font-weight: 700; }
+.api-status .error   { color: var(--red-dark); font-weight: 700; }
+
+/* ── Console ── */
+.console-box {
+  background: #0f172a;
+  color: #86efac;
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.1rem;
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-size: .79rem;
+  min-height: 130px;
+  max-height: 210px;
+  overflow-y: auto;
+  margin-bottom: .8rem;
+  border: 1px solid #1e293b;
+  line-height: 1.7;
+}
+.console-box::-webkit-scrollbar { width: 5px; }
+.console-box::-webkit-scrollbar-track { background: #1e293b; }
+.console-box::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+.log-line { margin-bottom: .1rem; }
+.log-line.warn { color: #fde68a; }
+.log-line.err  { color: #fca5a5; }
+.log-line.info { color: #86efac; }
+
+@media (max-width: 600px) {
+  .container { padding: 0 1rem; }
+  .card { padding: 1.25rem; }
+}

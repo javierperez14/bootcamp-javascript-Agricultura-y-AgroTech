@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroTech – Objetos Seguros con Symbols</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <span class="logo">🌱</span>
+    <div>
+      <h1>AgroTech – Objetos Seguros</h1>
+      <p>Week-09 · Symbols · Well-known Symbols · Javier Pérez</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- SecureOperator -->
+    <section class="card">
+      <h2>👤 SecureOperator</h2>
+      <div class="form-row">
+        <input id="op-name"     type="text"     placeholder="Nombre" />
+        <input id="op-email"    type="email"    placeholder="Email" />
+        <input id="op-password" type="password" placeholder="Contraseña" />
+        <input id="op-license"  type="text"     placeholder="Licencia (ej: AGR-12345)" />
+        <button class="btn" id="btn-create-op">Crear Operador</button>
+      </div>
+      <div id="op-result" class="result-box"></div>
+      <div class="demo-row">
+        <button class="btn btn-sm" id="btn-verify-pass">Verificar contraseña</button>
+        <input id="op-pass-check" type="password" placeholder="Contraseña a verificar" />
+        <button class="btn btn-sm" id="btn-mask-license">Licencia enmascarada</button>
+        <button class="btn btn-sm" id="btn-op-json">toJSON()</button>
+        <button class="btn btn-sm" id="btn-op-keys">Object.keys()</button>
+      </div>
+      <div id="op-demo-result" class="result-box"></div>
+    </section>
+
+    <!-- SecureWallet -->
+    <section class="card">
+      <h2>💰 SecureWallet</h2>
+      <div class="form-row">
+        <input id="wallet-init" type="number" placeholder="Balance inicial" value="500" />
+        <button class="btn" id="btn-create-wallet">Crear Wallet</button>
+      </div>
+      <div class="demo-row">
+        <input id="wallet-amount" type="number" placeholder="Monto" value="100" />
+        <button class="btn btn-sm" id="btn-deposit">Depositar</button>
+        <button class="btn btn-sm" id="btn-withdraw">Retirar</button>
+        <button class="btn btn-sm" id="btn-wallet-prim">toPrimitive</button>
+        <button class="btn btn-sm" id="btn-wallet-iter">Iterar transacciones</button>
+      </div>
+      <div id="wallet-result" class="result-box"></div>
+    </section>
+
+    <!-- SecureConfig -->
+    <section class="card">
+      <h2>⚙️ SecureConfig</h2>
+      <div id="config-demo" class="result-box">
+        <p>Config pública: <code id="config-public"></code></p>
+        <p>hasSecret('apiKey'): <code id="config-has-secret"></code></p>
+        <p>useSecret('apiKey'): <code id="config-use-secret"></code></p>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="module" src="solution/script.js"></script>
+</body>
+</html>

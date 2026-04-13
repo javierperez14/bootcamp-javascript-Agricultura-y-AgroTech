@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroTech – Registro de Operador</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <span class="logo">🌱</span>
+    <div>
+      <h1>AgroTech – Registro de Operador</h1>
+      <p>Week-06 · Validación con RegExp · Javier Pérez</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <form id="agroForm" novalidate>
+
+      <!-- Nombre -->
+      <div class="field-group">
+        <label for="name">Nombre completo</label>
+        <input type="text" id="name" name="name" placeholder="Ej: Carlos Mendoza" autocomplete="off" aria-describedby="name-msg" />
+        <span class="msg" id="name-msg"></span>
+      </div>
+
+      <!-- Email -->
+      <div class="field-group">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="operador@agrotech.co" autocomplete="off" aria-describedby="email-msg" />
+        <span class="msg" id="email-msg"></span>
+      </div>
+
+      <!-- Teléfono -->
+      <div class="field-group">
+        <label for="phone">Teléfono</label>
+        <input type="tel" id="phone" name="phone" placeholder="+57 300 123 4567" autocomplete="off" aria-describedby="phone-msg" />
+        <span class="msg" id="phone-msg"></span>
+      </div>
+
+      <!-- Contraseña -->
+      <div class="field-group">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Mín 8 chars, mayúscula, número, especial" aria-describedby="password-msg" />
+        <div class="strength-bar" aria-label="Fortaleza de contraseña">
+          <div class="strength-fill" id="strength-fill"></div>
+        </div>
+        <span class="strength-label" id="strength-label"></span>
+        <span class="msg" id="password-msg"></span>
+      </div>
+
+      <!-- Confirmar contraseña -->
+      <div class="field-group">
+        <label for="confirm">Confirmar contraseña</label>
+        <input type="password" id="confirm" name="confirm" placeholder="Repite la contraseña" aria-describedby="confirm-msg" />
+        <span class="msg" id="confirm-msg"></span>
+      </div>
+
+      <hr class="divider" />
+      <p class="section-title">🌾 Datos AgroTech</p>
+
+      <!-- Código de lote -->
+      <div class="field-group">
+        <label for="lotCode">Código de lote</label>
+        <input type="text" id="lotCode" name="lotCode" placeholder="Ej: LOT-2024-001" autocomplete="off" aria-describedby="lotCode-msg" />
+        <span class="msg" id="lotCode-msg"></span>
+      </div>
+
+      <!-- Área en hectáreas -->
+      <div class="field-group">
+        <label for="hectares">Área (hectáreas)</label>
+        <input type="text" id="hectares" name="hectares" placeholder="Ej: 12.5" autocomplete="off" aria-describedby="hectares-msg" />
+        <span class="msg" id="hectares-msg"></span>
+      </div>
+
+      <!-- Coordenadas GPS -->
+      <div class="field-group">
+        <label for="gps">Coordenadas GPS</label>
+        <input type="text" id="gps" name="gps" placeholder="Ej: 4.7110,-74.0721" autocomplete="off" aria-describedby="gps-msg" />
+        <span class="msg" id="gps-msg"></span>
+      </div>
+
+      <button type="submit" id="submitBtn" class="btn" disabled>Registrar Operador</button>
+    </form>
+
+    <!-- Resumen -->
+    <div id="summary" class="summary hidden">
+      <h2>✅ Registro exitoso</h2>
+      <pre id="summary-data"></pre>
+      <button class="btn btn-outline" id="resetBtn">Nuevo registro</button>
+    </div>
+  </main>
+
+  <script type="module" src="solution/script.js"></script>
+</body>
+</html>

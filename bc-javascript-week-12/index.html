@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroTech Manager – Aplicación Integral</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <span class="logo">🌱</span>
+      <div>
+        <h1>AgroTech Manager</h1>
+        <p>Week-12 · Aplicación Integral ES2023 · Javier Pérez</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <span id="cart-badge" class="cart-badge hidden">🛒 <span id="cart-count">0</span></span>
+      <span id="user-info" class="user-info"></span>
+      <button class="btn btn-sm" id="btn-auth">Iniciar sesión</button>
+    </div>
+  </header>
+
+  <!-- Auth Modal -->
+  <div id="auth-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="auth-title">Iniciar sesión</h2>
+      <input id="auth-name"     type="text"     placeholder="Nombre (solo registro)" class="hidden" />
+      <input id="auth-email"    type="email"    placeholder="Email" />
+      <input id="auth-password" type="password" placeholder="Contraseña (mín 6 chars)" />
+      <p id="auth-error" class="auth-error"></p>
+      <div class="modal-btns">
+        <button class="btn" id="btn-auth-submit">Entrar</button>
+        <button class="btn btn-outline" id="btn-auth-toggle">¿No tienes cuenta? Regístrate</button>
+        <button class="btn btn-outline" id="btn-auth-close">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>🛒 Carrito de Pedidos</h2>
+      <div id="cart-items"></div>
+      <div class="cart-total">Total: <strong id="cart-total">$0</strong></div>
+      <div class="modal-btns">
+        <button class="btn" id="btn-checkout">Confirmar pedido</button>
+        <button class="btn btn-outline" id="btn-clear-cart">Vaciar carrito</button>
+        <button class="btn btn-outline" id="btn-cart-close">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- Filtros -->
+    <div class="filters card">
+      <select id="filter-category">
+        <option value="">Todas las categorías</option>
+        <option value="sensor">Sensores</option>
+        <option value="drone">Drones</option>
+        <option value="tractor">Tractores</option>
+        <option value="irrigation">Irrigación</option>
+      </select>
+      <input id="filter-search" type="text" placeholder="Buscar equipo…" />
+      <select id="filter-sort">
+        <option value="name-asc">Nombre A-Z</option>
+        <option value="name-desc">Nombre Z-A</option>
+        <option value="price-asc">Precio ↑</option>
+        <option value="price-desc">Precio ↓</option>
+      </select>
+    </div>
+
+    <!-- Catálogo -->
+    <div id="catalog-grid" class="catalog-grid"></div>
+
+    <!-- Mis reservas -->
+    <section class="card" id="reservations-section" style="display:none">
+      <h2>📋 Mis Reservas <span class="badge" id="res-count">0</span></h2>
+      <div id="reservations-list"></div>
+    </section>
+
+  </main>
+
+  <script type="module" src="solution/js/main.js"></script>
+</body>
+</html>

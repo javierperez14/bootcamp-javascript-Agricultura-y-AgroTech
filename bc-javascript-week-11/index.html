@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroTech – Manejo de Errores</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <span class="logo">🌱</span>
+    <div>
+      <h1>AgroTech – Sistema Robusto</h1>
+      <p>Week-11 · Manejo de Errores · Custom Errors · Retry · Javier Pérez</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Crear registro -->
+    <section class="card">
+      <h2>📋 Crear Registro de Monitoreo</h2>
+      <div class="form-row">
+        <input id="rec-field"    type="text"   placeholder="Nombre del lote (mín 3 chars)" />
+        <input id="rec-operator" type="text"   placeholder="Operador" />
+        <input id="rec-humidity" type="number" placeholder="Humedad % (0-100)" />
+        <select id="rec-status">
+          <option value="">Estado…</option>
+          <option value="verified">Verificado</option>
+          <option value="pending">Pendiente</option>
+        </select>
+        <button class="btn" id="btn-create">Crear</button>
+      </div>
+      <div id="create-feedback" class="feedback"></div>
+    </section>
+
+    <!-- Lista de registros -->
+    <section class="card">
+      <h2>📂 Registros <span class="badge" id="rec-count">0</span></h2>
+      <div id="rec-list" class="rec-list"></div>
+    </section>
+
+    <!-- Simulación de API con retry -->
+    <section class="card">
+      <h2>🌐 Simulación de API (Retry + Backoff)</h2>
+      <p class="hint">Simula una llamada a la API con fallos aleatorios. Reintenta automáticamente hasta 3 veces.</p>
+      <button class="btn" id="btn-api-call">Llamar API</button>
+      <div id="api-status" class="api-status"></div>
+    </section>
+
+    <!-- Storage con fallback -->
+    <section class="card">
+      <h2>💾 Persistencia con Fallback</h2>
+      <div class="btn-row">
+        <button class="btn btn-sm" id="btn-save">Guardar en localStorage</button>
+        <button class="btn btn-sm" id="btn-load">Cargar desde localStorage</button>
+        <button class="btn btn-sm btn-danger" id="btn-corrupt">Simular datos corruptos</button>
+      </div>
+      <div id="storage-feedback" class="feedback"></div>
+    </section>
+
+    <!-- Consola de errores -->
+    <section class="card">
+      <h2>🖥️ Log de Errores</h2>
+      <div id="error-log" class="console-box"></div>
+      <button class="btn btn-outline" id="btn-clear-log">Limpiar</button>
+    </section>
+
+  </main>
+
+  <script type="module" src="solution/script.js"></script>
+</body>
+</html>

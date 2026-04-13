@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroTech – Paginación con Generadores</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <span class="logo">🌱</span>
+    <div>
+      <h1>AgroTech – Catálogo de Equipos</h1>
+      <p>Week-08 · Generadores · Iterables · Javier Pérez</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Controles -->
+    <div class="controls card">
+      <div class="ctrl-left">
+        <label>Items por página:
+          <select id="items-per-page">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="20">20</option>
+          </select>
+        </label>
+        <label>Filtrar tipo:
+          <select id="filter-type">
+            <option value="">Todos</option>
+            <option value="sensor">Sensor</option>
+            <option value="drone">Drone</option>
+            <option value="tractor">Tractor</option>
+          </select>
+        </label>
+        <input id="search-input" type="text" placeholder="Buscar por nombre…" />
+      </div>
+      <div class="ctrl-right">
+        <span id="page-info" class="page-info">Página 1 de 1</span>
+      </div>
+    </div>
+
+    <!-- Lista de equipos -->
+    <div id="equipment-grid" class="equipment-grid"></div>
+
+    <!-- Paginación -->
+    <div class="pagination">
+      <button class="btn" id="btn-first">⏮ Primera</button>
+      <button class="btn" id="btn-prev">◀ Anterior</button>
+      <div id="page-numbers" class="page-numbers"></div>
+      <button class="btn" id="btn-next">Siguiente ▶</button>
+      <button class="btn" id="btn-last">Última ⏭</button>
+    </div>
+
+  </main>
+
+  <script type="module" src="solution/script.js"></script>
+</body>
+</html>
